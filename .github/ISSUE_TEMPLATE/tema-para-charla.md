@@ -1,6 +1,6 @@
 ---
 name: Tema para charla
-about: Sugiere un tema de charla para un meetup
+about: Sugerir un tema de charla para un meetup
 
 ---
 
