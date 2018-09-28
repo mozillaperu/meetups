@@ -18,6 +18,7 @@ Me contactan por (Twitter / Github / Facebook)
 - [ ] Avisos de la comunidad / actividades / etc.
 
 **Título de la charla**
+Las charlas propuestas deben estar relacionadas de alguna forma a la misión de Mozilla y/o alguno de los proyectos que inició o mantiene. Desde tecnologías y herramientas creadas y/o utilizadas hasta proyectos de la comunidad.
 La idea es que resuma la idea central de tu presentación. Algo como:
 - 'WebExtensions, building interplatform addons'
 - 'Mozilla A-Frame, make WebVR ..'
