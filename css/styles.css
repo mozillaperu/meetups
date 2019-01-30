@@ -1,0 +1,18 @@
+body {
+ margin: 0;
+ padding: 0;
+}
+
+header {
+  padding: 1rem;
+}
+
+header img {
+  width: 20%;
+}
+
+h1 {
+  font-family: Zilla Slab Bold;
+  font-size: 5rem;
+  line-height: 1;
+}
