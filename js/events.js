@@ -1,24 +1,24 @@
-const getElement = (clone, tag) => {
-  return clone.querySelector(`.event-${tag}`);
+const getElement = (element, tag) => {
+  return element.querySelector(`.event-${tag}`);
 };
 
-const addText = (clone, tag, content) => {
-  getElement(clone, tag).textContent = content;
+const addText = (element, tag, content) => {
+  getElement(element, tag).textContent = content;
 };
 
 const renderEvent = (wrapperTag, event) => {
   let wrapper = document.querySelector(wrapperTag);
-  let template = document.querySelector('#event-box-template');
-  let clone = template.content.cloneNode(true);
-  addText(clone, 'title', event.name);
+  let box = document.createElement('event-box');
+  let shadow = box.shadowRoot;
+  addText(shadow, 'title', event.name);
   let timeContent = `${event.local_date} - ${event.local_time}`;
-  addText(clone, 'time', timeContent);
-  getElement(clone, 'desc').innerHTML = event.description;
-  getElement(clone, 'rsvp').setAttribute('href', event.link);
+  addText(shadow, 'time', timeContent);
+  getElement(shadow, 'desc').innerHTML = event.description;
+  getElement(shadow, 'rsvp').setAttribute('href', event.link);
   if (event.status === 'upcoming') {
-    addText(clone, 'rsvp', 'register in meetup');
+    addText(shadow, 'rsvp', 'register in meetup');
   }
-  wrapper.appendChild(clone);
+  wrapper.appendChild(box);
 }
 
 const pastEvents = ({ data }) => {

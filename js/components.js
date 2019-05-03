@@ -7,5 +7,6 @@ customElements.define('event-box',
         .content;
       const shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(template.cloneNode(true));
+    }
   }
-});
+);
