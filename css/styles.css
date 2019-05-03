@@ -16,3 +16,24 @@ h1 {
   font-size: 5rem;
   line-height: 1;
 }
+
+#upcoming-event {
+  width: 80%;
+  margin: auto;
+}
+
+#upcoming-event event-box {
+  width: 75%;
+}
+
+#events-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#events-wrapper event-box {
+  width: 25%;
+  margin: 0.7rem;
+  flex: auto;
+  overflow: hidden;
+}
