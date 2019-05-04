@@ -11,7 +11,7 @@ const renderEvent = (wrapperTag, event) => {
   let box = document.createElement('event-box');
   let shadow = box.shadowRoot;
   addText(shadow, 'title', event.name);
-  let timeContent = `${event.local_date} - ${event.local_time}`;
+  let timeContent = `${event.local_date} ${event.local_time}`;
   addText(shadow, 'time', timeContent);
   getElement(shadow, 'desc').innerHTML = event.description;
   getElement(shadow, 'rsvp').setAttribute('href', event.link);
