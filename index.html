@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css" />
   </head>
   <body>
     <header>
@@ -21,9 +22,21 @@
       <div class='event-desc'></div>
     </template>
 
-    <div id='upcoming-event'></div>
+    <template id='venue-template'>
+      <h3>Venue</h3>
+      <div class='venue-info'>
+        <div class='venue-name'></div>
+        <div class='venue-address'></div>
+      </div>
+    </template>
+
+    <div class='upcoming-wrapper'>
+      <div id='upcoming-event'></div>
+      <div id='venue-map'></div>
+    </div>
     <div id='events-wrapper'></div>
 
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
     <script src='js/components.js'></script>
     <script src='js/events.js'></script>
   </body>
