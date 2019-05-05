@@ -1,0 +1,45 @@
+body {
+ margin: 0;
+ padding: 0;
+}
+
+header {
+  padding: 1rem;
+}
+
+header img {
+  width: 20%;
+}
+
+h1 {
+  font-family: Zilla Slab Bold;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.upcoming-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+#upcoming-event event-box {
+  width: 75%;
+}
+
+#events-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#events-wrapper event-box {
+  width: 25%;
+  margin: 0.7rem;
+  flex: auto;
+  overflow: hidden;
+}
+
+#venue-map {
+  position:relative;
+  width:100%;
+  height: 350px;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mozilla Perú Community Meetup</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css" />
+  </head>
+  <body>
+    <header>
+      <img src="https://d24wuq6o951i2g.cloudfront.net/img/events/id/298/2980164/assets/399.moz-logo-bw-rgb.png" alt="">
+    </header>
+    <h1>
+      Community meetup
+    </h1>
+
+    <template id='event-box-template'>
+      <h3 class='event-title'></h3>
+      <div class='event-time'></div>
+      <a class='event-rsvp'>see in meetup</a>
+      <div class='event-desc'></div>
+    </template>
+
+    <template id='venue-template'>
+      <h3>Venue</h3>
+      <div class='venue-info'>
+        <div class='venue-name'></div>
+        <div class='venue-address'></div>
+      </div>
+    </template>
+
+    <div class='upcoming-wrapper'>
+      <div id='upcoming-event'></div>
+      <div id='venue-map'></div>
+    </div>
+    <div id='events-wrapper'></div>
+
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+    <script src='js/components.js'></script>
+    <script src='js/events.js'></script>
+  </body>
+</html>
