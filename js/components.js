@@ -1,3 +1,7 @@
+import twitterBox from './twitter-box.js';
+
+customElements.define('twitter-box', twitterBox);
+
 customElements.define('event-box',
   class extends HTMLElement {
     constructor() {
