@@ -1,0 +1,18 @@
+.link-btn {
+  transition: background-color .1s,box-shadow .1s,color .1s,transform .1s;
+  background-color: #000;
+  border-radius: 2px;
+  border: 2px solid #000 !important;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700 !important;
+  padding: 14px 30px !important;
+}
+
+.link-btn:hover {
+  transform: translate(-2px,-2px);
+  background-color: #fff;
+  box-shadow: 4px 4px 0 0 #000;
+  color: #000 !important;
+}
