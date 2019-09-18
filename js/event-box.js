@@ -52,6 +52,7 @@ export default class extends HTMLElement {
   }
 
   renderMap(lat, lon) {
+    if (!window.L) return;
     L.mapbox.accessToken = 'pk.eyJ1Ijoic3BsYXNoIiwiYSI6Ijc1RjlLUkEifQ.bYkfQEnsZfJWlX5DkAOz3g';
     let map = L.mapbox.map('venue-map')
       .setView([lat, lon], 17)

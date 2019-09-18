@@ -1,5 +1,7 @@
 const renderEvent = (wrapperTag, event) => {
   let wrapper = document.querySelector(wrapperTag);
+  if (!wrapper) return;
+
   let box = document.createElement('event-box');
   let shadow = box.shadowRoot;
   box.setAttribute('event', JSON.stringify(event));
