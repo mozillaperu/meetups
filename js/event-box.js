@@ -9,8 +9,7 @@ export default class extends HTMLElement {
     const template = document.createElement('div');
     template.innerHTML = `
       <h3 class='event-title'>${event.name}</h3>
-      <div class='event-time'></div>
-      <a class='event-rsvp'>see in meetup</a>
+      ${ this.timeRsvpTemplate() || '' }
       <div class='event-desc'></div>
     `;
     const shadow = this.attachShadow({mode: 'open'});
@@ -32,6 +31,19 @@ export default class extends HTMLElement {
     `;
 
     shadow.appendChild(style);
+  }
+
+  timeRsvpTemplate() {
+    if (this.onlyDesc) return;
+
+    return `
+      <div class='event-time'></div>
+      <a class='event-rsvp'>see in meetup</a>
+    `;
+  }
+
+  get onlyDesc() {
+    return this.parentNode ? this.parentNode.getAttribute('only-desc') : null;
   }
 
   get event() {
@@ -65,12 +77,15 @@ export default class extends HTMLElement {
     const e = this.event;
     this.addText('event', 'title', e.name);
     let timeContent = `${e.local_date} ${e.local_time}`;
-    this.addText('event', 'time', timeContent);
+    if (!this.onlyDesc) {
+      this.addText('event', 'time', timeContent);
+      this.getChild('event', 'rsvp').setAttribute('href', e.link);
+    }
+
     this.getChild('event', 'desc').innerHTML = e.description;
-    this.getChild('event', 'rsvp').setAttribute('href', e.link);
 
     if (e.status == 'upcoming') {
-      this.addText('event', 'rsvp', 'register in meetup');
+      if (!this.onlyDesc) this.addText('event', 'rsvp', 'register in meetup');
       const venue = e.venue;
       const venueTemplate = document.createElement('div');
       venueTemplate.innerHTML = `
