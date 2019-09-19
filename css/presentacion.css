@@ -1,3 +1,7 @@
+* {
+  font-family: "Zilla Slab" !important;
+}
+
 .link-btn {
   transition: background-color .1s,box-shadow .1s,color .1s,transform .1s;
   background-color: #000;
