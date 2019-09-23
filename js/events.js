@@ -4,6 +4,8 @@ const renderEvent = (wrapperTag, event) => {
 
   let box = document.createElement('event-box');
   let shadow = box.shadowRoot;
+  const onlyDesc = wrapper.getAttribute('only-desc');
+  if (onlyDesc) box.setAttribute('only-desc', onlyDesc);
   box.setAttribute('event', JSON.stringify(event));
 
   wrapper.appendChild(box);

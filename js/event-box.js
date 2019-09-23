@@ -9,7 +9,8 @@ export default class extends HTMLElement {
     const template = document.createElement('div');
     template.innerHTML = `
       <h3 class='event-title'>${event.name}</h3>
-      ${ this.timeRsvpTemplate() || '' }
+      <div class='event-time'></div>
+      <a class='event-rsvp'>see in meetup</a>
       <div class='event-desc'></div>
     `;
     const shadow = this.attachShadow({mode: 'open'});
@@ -28,22 +29,17 @@ export default class extends HTMLElement {
         margin: 10px;
         display: inline-block;
       }
+
+      .hide {
+        display: none;
+      }
     `;
 
     shadow.appendChild(style);
   }
 
-  timeRsvpTemplate() {
-    if (this.onlyDesc) return;
-
-    return `
-      <div class='event-time'></div>
-      <a class='event-rsvp'>see in meetup</a>
-    `;
-  }
-
   get onlyDesc() {
-    return this.parentNode ? this.parentNode.getAttribute('only-desc') : null;
+    return this.getAttribute('only-desc') || null;
   }
 
   get event() {
@@ -77,15 +73,12 @@ export default class extends HTMLElement {
     const e = this.event;
     this.addText('event', 'title', e.name);
     let timeContent = `${e.local_date} ${e.local_time}`;
-    if (!this.onlyDesc) {
-      this.addText('event', 'time', timeContent);
-      this.getChild('event', 'rsvp').setAttribute('href', e.link);
-    }
-
+    this.addText('event', 'time', timeContent);
+    this.getChild('event', 'rsvp').setAttribute('href', e.link);
     this.getChild('event', 'desc').innerHTML = e.description;
 
     if (e.status == 'upcoming') {
-      if (!this.onlyDesc) this.addText('event', 'rsvp', 'register in meetup');
+      this.addText('event', 'rsvp', 'register in meetup');
       const venue = e.venue;
       const venueTemplate = document.createElement('div');
       venueTemplate.innerHTML = `
@@ -97,6 +90,11 @@ export default class extends HTMLElement {
       `;
       this.shadowRoot.appendChild(venueTemplate);
       this.renderMap(venue.lat, venue.lon);
+    }
+
+    if (this.onlyDesc) {
+      this.getChild('event', 'rsvp').classList.add('hide');
+      this.getChild('event', 'time').classList.add('hide');
     }
   }
 }
