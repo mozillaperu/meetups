@@ -24,3 +24,7 @@
 .organizers-wrapper {
   display: flex;
 }
+
+.social-link {
+  font-size: 1.8rem !important;
+}
