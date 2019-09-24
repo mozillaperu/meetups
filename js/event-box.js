@@ -29,7 +29,9 @@ export default class extends HTMLElement {
         margin: 10px;
         display: inline-block;
       }
-
+      .event-desc {
+        text-align: left;
+      }
       .hide {
         display: none;
       }
@@ -71,16 +73,25 @@ export default class extends HTMLElement {
 
   attributeChangedCallback() {
     const e = this.event;
-    this.addText('event', 'title', e.name);
-    let timeContent = `${e.local_date} ${e.local_time}`;
-    this.addText('event', 'time', timeContent);
+    this.addText(
+      'event',
+      'title',
+      this.onlyDesc ? 'Agenda' : e.name
+    );
+    let timeContent = new Date(`${e.local_date} ${e.local_time}`);
+    let timeOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour12: true, hour: '2-digit', minute: '2-digit' };
+    this.addText('event', 'time', timeContent.toLocaleString('es-PE', timeOptions));
     this.getChild('event', 'rsvp').setAttribute('href', e.link);
-    this.getChild('event', 'desc').innerHTML = e.description;
+    let desc = this.getChild('event', 'desc');
+    desc.innerHTML = e.description;
+    desc.children[desc.children.length - 1].remove();
+    desc.children[desc.children.length - 1].remove();
 
     if (e.status == 'upcoming') {
       this.addText('event', 'rsvp', 'register in meetup');
       const venue = e.venue;
       const venueTemplate = document.createElement('div');
+      venueTemplate.className = 'event-venue';
       venueTemplate.innerHTML = `
         <h3>Venue</h3>
         <div class='venue-info'>
@@ -93,8 +104,8 @@ export default class extends HTMLElement {
     }
 
     if (this.onlyDesc) {
+      this.getChild('event', 'venue').classList.add('hide');
       this.getChild('event', 'rsvp').classList.add('hide');
-      this.getChild('event', 'time').classList.add('hide');
     }
   }
 }
