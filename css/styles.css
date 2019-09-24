@@ -1,6 +1,7 @@
 body {
  margin: 0;
  padding: 0;
+ font-family: "Zilla Slab", sans-serif;
 }
 
 header {
@@ -11,8 +12,10 @@ header img {
   width: 20%;
 }
 
-h1 {
-  font-family: Zilla Slab Bold;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+h1, h2,h3 {
   font-size: 5rem;
   line-height: 1;
 }
