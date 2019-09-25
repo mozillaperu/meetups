@@ -82,10 +82,7 @@ export default class extends HTMLElement {
     let timeOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour12: true, hour: '2-digit', minute: '2-digit' };
     this.addText('event', 'time', timeContent.toLocaleString('es-PE', timeOptions));
     this.getChild('event', 'rsvp').setAttribute('href', e.link);
-    let desc = this.getChild('event', 'desc');
-    desc.innerHTML = e.description;
-    desc.children[desc.children.length - 1].remove();
-    desc.children[desc.children.length - 1].remove();
+    this.getChild('event', 'desc').innerHTML = e.description;
 
     if (e.status == 'upcoming') {
       this.addText('event', 'rsvp', 'register in meetup');
