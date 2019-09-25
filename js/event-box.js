@@ -82,7 +82,8 @@ export default class extends HTMLElement {
     let timeOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour12: true, hour: '2-digit', minute: '2-digit' };
     this.addText('event', 'time', timeContent.toLocaleString('es-PE', timeOptions));
     this.getChild('event', 'rsvp').setAttribute('href', e.link);
-    this.getChild('event', 'desc').innerHTML = e.description;
+    const desc = this.getChild('event', 'desc');
+    desc.innerHTML = e.description;
 
     if (e.status == 'upcoming') {
       this.addText('event', 'rsvp', 'register in meetup');
@@ -103,6 +104,13 @@ export default class extends HTMLElement {
     if (this.onlyDesc) {
       this.getChild('event', 'venue').classList.add('hide');
       this.getChild('event', 'rsvp').classList.add('hide');
+
+      desc.childNodes.forEach((p) => {
+        const regexs = [/proponer una charla/, /Pautas para la participación/];
+        regexs.forEach((regex) => {
+          if (regex.test(p.innerHTML)) p.classList.add('hide')
+        });
+      });
     }
   }
 }
