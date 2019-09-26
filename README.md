@@ -1,5 +1,7 @@
 # Meetups
 
+![Mozilla Perú](img/logo1.png)
+
 [Mozilla Perú](http://www.mozilla.pe) es la comunidad de usuarios, entusiastas y
 público en general que se identifica con el
 [manifiesto de Mozilla](https://www.mozilla.org/es-ES/about/manifesto/), un
