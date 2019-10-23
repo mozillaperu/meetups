@@ -106,7 +106,7 @@ export default class extends HTMLElement {
       this.getChild('event', 'rsvp').classList.add('hide');
 
       desc.childNodes.forEach((p, index) => {
-        if (index > 0) {
+        if (p.tagName === 'P' && index > 0) {
           p.classList.add('hide')
         }
       });
