@@ -106,7 +106,7 @@ export default class extends HTMLElement {
       this.getChild('event', 'rsvp').classList.add('hide');
 
       desc.childNodes.forEach((p) => {
-        const regexs = [/proponer una charla/, /Pautas para la participación/];
+        const regexs = [/proponer una charla/i, /pautas para la participación/i];
         regexs.forEach((regex) => {
           if (regex.test(p.innerHTML)) p.classList.add('hide')
         });
