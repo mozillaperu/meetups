@@ -1,11 +1,29 @@
 ---
 name: 🚀 Tema para charla
 about: Sugerir un tema de charla para un meetup
-
 ---
+
+<!--
+Las charlas propuestas pueden estar relacionadas de alguna forma a la misión de Mozilla y/o alguno de los proyectos que inició o mantiene, desde tecnologías y herramientas creadas y/o utilizadas hasta proyectos de la comunidad. Aunque los temas son abiertos.
+-->
+<!--
+Algo como:
+- WebExtensions, construyendo addons de navegador
+- A-Frame, realidad virtual en la web
+- Filosofía de privacidad de Firefox
+- Writing safety code with Rust
+- Usando React en las herramienta de desarrollo de Firefox
+- Firefox Reality, un navegador construido para realidad virtual
+- Mozilla Gateway, una introducción a Web of Things
+- Avisos de la comunidad
+- Mozilla y la web abierta ...
+- Firefox Focus
+- Desarrollo web con XYZ Framework.
+-->
+
 | Pregunta                   | Respuesta
 |----------------------------|----------
-| Quién hará la presentación | Alguien más / Yo <!-- Idea para presentación futura por alguien más / Yo quiero hacer la presentación !-->
+| Quién hará la presentación | Alguien más <!-- Idea para presentación futura por alguien más --> / Yo <!-- Yo quiero hacer la presentación !-->
 | Tipo de presentación       | Keynote / Lightning Talk / Avisos de la comunidad / actividades / etc.
 
 ¡Hola!
@@ -13,21 +31,7 @@ about: Sugerir un tema de charla para un meetup
 Mi nombre es ... Trabajo en ... <!-- esto es opcional -->. Me contactan por <!-- Twitter / Github / Facebook -->.
 
 **Título de la charla**
-<!-- Las charlas propuestas deben estar relacionadas de alguna forma a la misión de Mozilla y/o alguno de los proyectos que inició o mantiene. Desde tecnologías y herramientas creadas y/o utilizadas hasta proyectos de la comunidad. -->
-<!--
-La idea es que resuma la idea central de tu presentación. Algo como:
-- WebExtensions, building interplatform addons
-- Mozilla A-Frame, make WebVR
-- Firefox privacy philosophy
-- Writing safety code with Rust
-- Using react in Firefox dev tools
-- Firefox Reality, a browser built for virtual reality
-- Using Mozilla Gateway, an introduction to Web of Things
-- Avisos de la comunidad
-- Mozilla and the open web ...
-- Firefox Focus new features
-- Otra
--->
+<!-- La idea es que resuma la idea central de tu presentación. -->
 
 **Descripción de la charla**
 <!-- Con 20 palabras estamos bien -->
