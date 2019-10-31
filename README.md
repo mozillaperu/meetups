@@ -13,5 +13,8 @@ tanto de nuestras reuniones futuras, e inscribirte en ellas.
 
 En nuestro grupo hablamos de Firefox, tecnologías web y la Web Abierta. Acogemos
 a usuarios de Firefox y otros productos de Mozilla, desarrolladores web y
-desarrolladores de aplicaciones web móviles.
+desarrolladores de aplicaciones web móviles. Anímate a proponer una charla [siguiendo estos pasos](https://github.com/mozillaperu/meetups/wiki/%C2%BFC%C3%B3mo-proponer-una-charla%3F).
 
+## Guías para la participación
+
+https://www.mozilla.org/about/governance/policies/participation/
