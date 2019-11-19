@@ -2,3 +2,5 @@ theme: jekyll-theme-minimal
 
 plugins:
   - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
