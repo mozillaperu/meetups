@@ -25,6 +25,7 @@
   display: flex;
 }
 
-.social-link {
-  font-size: 1.8rem !important;
+social-link {
+  font-size: 1.5rem !important;
+  float: left !important;
 }
