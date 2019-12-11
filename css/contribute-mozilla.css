@@ -1,5 +1,25 @@
-* {
-  font-family: "Zilla Slab" !important;
+.libs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.libs li {
+  list-style: none;
+  float: left;
+  margin: 0.5rem;
+  max-width: 250px;
+}
+
+.info {
+  color: black;
+}
+
+.moz-logo {
+  width: 350px;
+}
+
+.title {
+  font-size: 10rem;
 }
 
 .link-btn {
@@ -19,13 +39,4 @@
   background-color: #fff;
   box-shadow: 4px 4px 0 0 #000;
   color: #000 !important;
-}
-
-.organizers-wrapper {
-  display: flex;
-}
-
-social-link {
-  font-size: 1.5rem !important;
-  float: left !important;
 }

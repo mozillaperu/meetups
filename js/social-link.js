@@ -1,12 +1,16 @@
-export default class extends HTMLParagraphElement {
+export default class extends HTMLElement {
   constructor() {
     super();
-    const link = this.getAttribute('link');
     const icon = this.getAttribute('icon');
+    const link = this.getAttribute('link');
+    const name = this.getAttribute('name') || link || '';
+    const url = this.getAttribute('url') || link || '#';
     this.innerHTML = `
-      <a href='https://${link}'>
+      <a href='${url}'>
         <i class='fab fa-${icon}'></i>
-        <strong>${link}</strong>
+        <strong>
+          ${name}
+        </strong>
       </a>
     `;
 
