@@ -16,7 +16,7 @@ Las charlas propuestas pueden estar relacionadas de alguna forma a la misión de
 
 Mi nombre es ... Trabajo en ... <!-- esto es opcional -->. Me contactan por <!-- Twitter / Github / Facebook -->.
 
-<!-- Durante las dos semanas antes del meetup haremos una charla de prueba (de manera remota) sólo para estar preparados y coordinar para el día del meetup. Luego te contactaremos por los medios que indicaste anteriormente :) -->
+<!-- En el transcurso de las dos semanas antes del meetup haremos una charla de prueba (de manera remota) sólo para estar preparados, coordinar y que todo salga lo mejor posible el día del meetup. Luego te contactaremos por los medios que indicaste anteriormente :) -->
 
 **Título de la charla**
 <!-- La idea es que resuma la idea central de tu presentación. -->
