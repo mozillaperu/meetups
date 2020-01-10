@@ -6,20 +6,8 @@ about: Sugerir un tema de charla para un meetup
 <!--
 Las charlas propuestas pueden estar relacionadas de alguna forma a la misión de Mozilla y/o alguno de los proyectos que inició o mantiene, desde tecnologías y herramientas creadas y/o utilizadas hasta proyectos de la comunidad. Aunque los temas son abiertos.
 -->
-<!--
-Algo como:
-- WebExtensions, construyendo addons de navegador
-- A-Frame, realidad virtual en la web
-- Filosofía de privacidad de Firefox
-- Writing safety code with Rust
-- Usando React en las herramienta de desarrollo de Firefox
-- Firefox Reality, un navegador construido para realidad virtual
-- Mozilla Gateway, una introducción a Web of Things
-- Avisos de la comunidad
-- Mozilla y la web abierta ...
-- Firefox Focus
-- Desarrollo web con XYZ Framework.
--->
+
+<!-- Durante las dos semanas antes del meetup trataremos de hacer una charla previa (puede ser remota) sólo para estar preparados y coordinar para el día del meetup. Luego te contactaremos :) -->
 
 | Pregunta                   | Respuesta
 |----------------------------|----------
