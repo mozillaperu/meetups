@@ -1,0 +1,10 @@
+img {
+  border: none !important;
+}
+
+.step {
+  background: #333;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 5px 0;
+}
